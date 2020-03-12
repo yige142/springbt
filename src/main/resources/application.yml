@@ -1,0 +1,17 @@
+#server:
+#  port: 8081
+
+person:
+  name: 小毛
+  age: 20
+  boss: yes
+  birth: 2020/02/02
+  maps: {k1: 222,k2: 333}
+  lists: {张三 -李四}
+  dog:
+    name: 金毛
+    age: 3
+
+dog:
+  name: 二哈
+  age: 1
