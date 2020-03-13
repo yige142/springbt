@@ -1,0 +1,16 @@
+1  问题:pom引入mysql没有找到对应的版本
+解决 可以按照IDE 给的https://repo.maven.apache.org/maven2/ 地址，在里面查到有就写对应的名字就可以，
+列如pom 引入的mysql 5.1.26
+
+2  问题：配置完druid 调试是否成功 调试 onnection conn=dataSource.getConnection(); 会报错
+   原因，1 默认导入的mysql连接是8版本，且  driver-class-name: com.mysql.jdbc.Driver 路径李多
+   了个 bc (com.mysql.bc.jdbc.Driver)
+   解决：跟换本机mysql对应的连接版本，换成5.1.26 ，再吧yml配置文件李的 driver-class-name地址改对
+
+
+3  问题 测试连接上druid能否从mysql里取数据    jdbcTemplate 取不到值
+   解决 ： @Autowired DataSource dataSource; @Autowired JdbcTemplate jdbcTemplate;  把JdbcTemplate
+   加上@Autowired标签，让其也加入spring容器，从而轻松调用
+
+
+

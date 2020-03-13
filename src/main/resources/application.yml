@@ -1,17 +1,27 @@
 #server:
 #  port: 8081
 
-person:
-  name: 小毛
-  age: 20
-  boss: yes
-  birth: 2020/02/02
-  maps: {k1: 222,k2: 333}
-  lists: {张三 -李四}
-  dog:
-    name: 金毛
-    age: 3
+#person:
+#  name: 小毛
+#  age: 20
+#  boss: yes
+#  birth: 2020/02/02
+#  maps: {k1: 222,k2: 333}
+#  lists: {张三 -李四}
+#  dog:
+#    name: 金毛
+#    age: 3
+#
+#dog:
+#  name: 二哈
+#  age: 1
 
-dog:
-  name: 二哈
-  age: 1
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/ccc
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    #type指定用druid的连接池，注销则使用springboot自带的 HikariDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
