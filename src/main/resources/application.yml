@@ -25,3 +25,5 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     #type指定用druid的连接池，注销则使用springboot自带的 HikariDataSource
     type: com.alibaba.druid.pool.DruidDataSource
+
+debug: true

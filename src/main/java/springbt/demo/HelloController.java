@@ -17,13 +17,14 @@ public class HelloController {
     JdbcTemplate jdbcTemplate;
 
     /**
-     * 测试访问hello能否修改数据库数据
+     * 测试访问hello能否修改数据库数据F
+     *
      * @return
      */
     @RequestMapping("/hello")
-    public String hello(){
-        String sql="update c_tt set name=? where id=3";
-        int count=jdbcTemplate.update(sql,"kdd3");
+    public String hello() {
+        String sql = "update c_tt set name=? where id=3";
+        int count = jdbcTemplate.update(sql, "kdd3");
         System.out.print(count);
         return "333";
     }
