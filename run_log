@@ -1,0 +1,14 @@
+2020-03-17 == [main] == INFO  ==springbt.demo.DemoApplicationTests ==Starting DemoApplicationTests on DESKTOP-GD3CDS6 with PID 10892 (started by Hasee in E:\JAVA\JAVAWORK\springbt)
+2020-03-17 == [main] == INFO  ==springbt.demo.DemoApplicationTests ==No active profile set, falling back to default profiles: default
+2020-03-17 == [main] == INFO  ==o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-17 == [main] == INFO  ==springbt.demo.DemoApplicationTests ==Started DemoApplicationTests in 2.914 seconds (JVM running for 4.301)
+2020-03-17 == [main] == INFO  ==springbt.demo.DemoApplicationTests ==info日志
+2020-03-17 == [main] == ERROR ==springbt.demo.DemoApplicationTests ==错误日志
+2020-03-17 == [SpringContextShutdownHook] == INFO  ==o.s.scheduling.concurrent.ThreadPoolTaskExecutor ==Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-17 18:41:32.258  INFO 15936 --- [main] springbt.demo.DemoApplicationTests       : Starting DemoApplicationTests on DESKTOP-GD3CDS6 with PID 15936 (started by Hasee in E:\JAVA\JAVAWORK\springbt)
+2020-03-17 18:41:32.260  INFO 15936 --- [main] springbt.demo.DemoApplicationTests       : No active profile set, falling back to default profiles: default
+2020-03-17 18:41:34.146  INFO 15936 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-17 18:41:34.622  INFO 15936 --- [main] springbt.demo.DemoApplicationTests       : Started DemoApplicationTests in 2.915 seconds (JVM running for 4.23)
+2020-03-17 18:41:34.927  INFO 15936 --- [main] springbt.demo.DemoApplicationTests       : info日志
+2020-03-17 18:41:34.927 ERROR 15936 --- [main] springbt.demo.DemoApplicationTests       : 错误日志
+2020-03-17 18:41:34.948  INFO 15936 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

@@ -2,6 +2,8 @@ package springbt.demo;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.junit.jupiter.api.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -20,6 +22,25 @@ import java.util.Map;
 
 @SpringBootTest
 class DemoApplicationTests {
+
+    //测试日志功能
+    Logger logger= LoggerFactory.getLogger(getClass());
+    @Test
+    public void test6(){
+        //日志级别由高到低
+        //error>info>debug>trace
+        logger.trace("trace运行日志");
+        logger.info("info日志");
+        logger.error("错误日志");
+    }
+
+
+
+
+
+
+
+
 
     @Autowired
      Person p;
