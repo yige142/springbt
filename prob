@@ -13,4 +13,6 @@
    加上@Autowired标签，让其也加入spring容器，从而轻松调用
 
 
+4  web开发 webjars 可以用maven引入js bootstrap等   网站 webjars.org
 
+5  @RestController 中注入模板语法 html上面就解析不了，@Controller则解析正常 ??

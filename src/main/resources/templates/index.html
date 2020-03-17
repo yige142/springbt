@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="'hello SpringBoot'">hello thymeleaf</p>
+
+<!--数学运算-->
+<p th:text="9 + 10"></p>
+<p th:text="10 * 10"></p>
+<p th:text="1 - 10"></p>
+<p th:text="8 / 3"></p>
+<p th:text="3 % 2"></p>
+<!--操作域对象-->
+<p th:text="${user}"></p>
+<p th:text="${user.username}"></p>
+</body>
+</html>
