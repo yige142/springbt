@@ -16,3 +16,7 @@
 4  web开发 webjars 可以用maven引入js bootstrap等   网站 webjars.org
 
 5  @RestController 中注入模板语法 html上面就解析不了，@Controller则解析正常 ??
+   原因：使用@Controller修饰类，可以根据需要返回各种我们所需的数据（json,ModelAndView,静态页面），
+   而使用RestController修饰类，最后返回结果都会被解析成json对象；另外控制器里需要加
+   Model(import org.springframework.ui.Model;), public String tt(Model model){} 不加Model,页面
+   thymeleaf语法不识别
