@@ -20,3 +20,49 @@
    而使用RestController修饰类，最后返回结果都会被解析成json对象；另外控制器里需要加
    Model(import org.springframework.ui.Model;), public String tt(Model model){} 不加Model,页面
    thymeleaf语法不识别
+
+6.1 项目打包默认是jar包怎么改成war包
+   解决  <groupId>springbt</groupId>
+           <artifactId>demo</artifactId>
+           <version>0.0.1</version>
+            位置下<!--改为war方式-->
+           <packaging>war</packaging>
+
+
+            <!--让maven打包项目是war包 引入war包插件（不写maven会默认再引一遍）-->
+            <plugin>
+                   <groupId>org.apache.maven.plugins</groupId>
+                   <artifactId>maven-war-plugin</artifactId>
+                   <version>2.6</version>
+                   <configuration>
+                       <failOnMissingWebXml>false</failOnMissingWebXml>
+                   </configuration>
+           </plugin>
+
+           <!--war包命名-->
+           <finalName>demo22</finalName>
+
+
+           补充：
+           <!-- 打成war的时候打开注释，本地开发用内嵌tomcat时加上注释（不知道换机器要不要开注释，本地打包是没有开注释的） -->
+           <!--        <dependency>-->
+           <!--            <groupId>org.springframework.boot</groupId>-->
+           <!--            <artifactId>spring-boot-starter-tomcat</artifactId>-->
+           <!--            <scope>provided</scope>-->
+           <!--        </dependency>-->
+
+
+6  打成war包部署到Tomcat访问竟然404
+   解决：在springbt 目录下重写启动类，然后看tomcat日志启动有spring字样则启动成功
+     @SpringBootApplication
+       public class Application extends SpringBootServletInitializer {
+           @Override
+           protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+               return application.sources(Application.class);
+           }
+
+           public static void main(String[] args) {
+               SpringApplication.run(Application.class, args);
+           }
+       }
+
