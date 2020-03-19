@@ -12,6 +12,15 @@ import java.util.Map;
 @Controller
 //@RestController
 public class IndexController {
+    @RequestMapping("/login")
+    public String login(Model model) {
+
+        //会输出到页面
+        model.addAttribute("aa","是否输出");
+        return "login";
+    }
+
+
     @RequestMapping("/home")
     public String home(Model model) {
         User user = new User();

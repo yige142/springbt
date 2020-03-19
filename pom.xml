@@ -90,12 +90,14 @@
         <!--war包命名-->
         <finalName>demo22</finalName>
         <plugins>
+
+            <!--下方注释如果打开，项目打war包会报错，暂不知什么原因-->
 <!--            <plugin>-->
 <!--                <groupId>org.springframework.boot</groupId>-->
 <!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
 <!--            </plugin>-->
 
-            <!--让maven打包项目是war包-->
+            <!--让maven打包项目是war包 引入war包插件（下方注释maven会再引一遍）-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
