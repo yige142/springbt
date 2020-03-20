@@ -1,9 +1,12 @@
 package springbt.demo;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.LocaleResolver;
+import springbt.component.MyLocalResolver;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -12,7 +15,13 @@ import java.util.Map;
 @Controller
 //@RestController
 public class IndexController {
-    @RequestMapping("/login")
+
+//    @Bean
+//    public LocaleResolver localeResolver(){
+//        return  new MyLocalResolver();
+//    }
+
+    @RequestMapping(value = {"/login","/login.html"})
     public String login(Model model) {
 
         //会输出到页面
