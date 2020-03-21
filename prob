@@ -74,3 +74,12 @@
 
          补充：maven打包只允许一个开启 @SpringBootApplication 注解，所以注掉DemoApplication中的，再打包测速项目
          跑通成功
+
+
+8  添加适配器后 把css js 都给拦截了
+   解决：public class MvcInterceptorConfig extends WebMvcConfigurationSupport {
+       1.替换成  public class MvcInterceptorConfig implements WebMvcConfigurer {
+       2.可能因为 spring boot 2.x已经改为最低支持jdk8版本，而jdk8中的接口允许有默认实现，所以已经废弃掉
+       WebMvcConfigurerAdapter适配类（WebMvcConfigurationSupport 可能跟WebMvcConfigurerAdapter适配类类似）
+       而改为直接实现WebMvcConfigurer接口
+       3.另外excludePathPatterns 再把js,css重写一遍，页面才能正常显示样式

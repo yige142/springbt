@@ -34,53 +34,53 @@
 <body class="bg-dark">
 
 
-    <div class="sufee-login d-flex align-content-center flex-wrap">
-        <div class="container">
-            <div class="login-content">
-                <div class="login-logo">
-                    <a href="index.html">
-                       <span th:text="#{login.tip}"></span>
-                    </a>
-                </div>
-                <div class="login-form">
-                    <form>
-                        <div class="form-group">
-                            <p th:text="${msg}" >123</p>
-                            <label th:text="#{login.name}">Email address </label>
-                            <input type="email" class="form-control" placeholder="Email">
-                        </div>
-                            <div class="form-group">
-                                <label th:text="#{login.password}">Password</label>
-                                <input type="password" class="form-control"  th:placeholder="#{login.password}">
-                        </div>
-                                <div class="checkbox">
-                                    <label>
-                                <input type="checkbox" > [[#{login.remberme}]]
-                            </label>
-                                    <label class="pull-right">
-                                <a href="#">Forgotten Password?</a>
-                            </label>
+<div class="sufee-login d-flex align-content-center flex-wrap">
+    <div class="container">
+        <div class="login-content">
+            <div class="login-logo">
+                <a href="index.html">
+                    <span th:text="#{login.tip}"></span>
+                </a>
+            </div>
+            <div class="login-form">
+                <form>
+                    <div class="form-group">
+                        <p th:text="${msg}" >123</p>
+                        <label th:text="#{login.name}">Email address </label>
+                        <input type="email" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label th:text="#{login.password}">Password</label>
+                        <input type="password" class="form-control"  th:placeholder="#{login.password}">
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" > [[#{login.remberme}]]
+                        </label>
+                        <label class="pull-right">
+                            <a href="#">Forgotten Password?</a>
+                        </label>
 
-                                </div>
-                                <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Sign in</button>
 
-                                <div class="register-link m-t-15 text-center">
-                                    <p>Don't have account ? <a href="#"> Sign Up Here</a></p>
-                                </div>
-                                <div class="register-link m-t-15 text-center">
-                                    <p><a th:href="@{/login.html(l='zh_CN')}"> 中文</a><a th:href="@{/login.html(l='en_US')}"> English</a></p>
-                                </div>
-                    </form>
-                </div>
+                    <div class="register-link m-t-15 text-center">
+                        <p>Don't have account ? <a href="#"> Sign Up Here</a></p>
+                    </div>
+                    <div class="register-link m-t-15 text-center">
+                        <p><a th:href="@{/login.html(l='zh_CN')}"> 中文</a><a th:href="@{/login.html(l='en_US')}"> English</a></p>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
 
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
+<script src="vendors/jquery/dist/jquery.min.js"></script>
 
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script>
+<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
 
 
 </body>

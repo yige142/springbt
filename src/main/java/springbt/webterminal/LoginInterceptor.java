@@ -2,14 +2,14 @@ package springbt.webterminal;
 
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
-import org.springframework.ui.Model;
+
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@Component
+@Component(value = "LoginInterceptor")
 public class LoginInterceptor implements HandlerInterceptor {
 
     /**
@@ -26,13 +26,14 @@ public class LoginInterceptor implements HandlerInterceptor {
            // Model model = null;
            // model.addAttribute("msg","没有权限请先登录1");
             //未登录，返回登录页面
-            request.setAttribute("msg","没有权限请先登录");
-
+            request.setAttribute("msg","msg");
             response.sendRedirect("/login.html");
             return false;
         }else{
             return true;
         }
+
+//     return true;
     }
 
 
