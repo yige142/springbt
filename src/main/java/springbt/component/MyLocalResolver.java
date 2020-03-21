@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Locale;
 /**
  * 重新实现LocaleResolver 拦截到html点击的中英切换参数就返回对应的国际语言
- *
+ *AcceptHeadLocalResolver 类中的LocaleResolver
  * */
 public class MyLocalResolver  implements LocaleResolver {
 
