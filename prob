@@ -88,3 +88,8 @@
       employee_list :: left-panel ，模板名应该引入的是index的公共部分，自己理解错成employee_list引入 left-panel的公共部分
       所以应该是 从index的公共部分引入left-pannel的公共区域 <aside th:replace="~{index :: left-panel}">
 
+10 根据点击导航栏 显示高亮不正常
+   解决：根据th模板赋值，点一个赋值一个变量，根据变量值显示
+   1.定义公共区域commonbar
+   2.index引入的时候赋值 <aside th:replace="/common/commonbar::left-panel(activeurl='index.html')"></aside>  activeurl=index.html
+   3.在commonbar 导航栏“Dashboard” <li class="" th:class="${activeurl=='index.html'?'active':''}">
