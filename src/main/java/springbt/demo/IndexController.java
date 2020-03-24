@@ -46,7 +46,7 @@ public class IndexController {
         return "home";
     }
 
-
+    @RequestMapping(value = {"/index","/index.html"})
     public String index(Model model) {
         return "index";
     }

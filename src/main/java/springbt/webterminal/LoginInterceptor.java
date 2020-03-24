@@ -27,8 +27,8 @@ public class LoginInterceptor implements HandlerInterceptor {
            // model.addAttribute("msg","没有权限请先登录1");
             //未登录，返回登录页面
             request.setAttribute("msg","msg");
-            response.sendRedirect("/login.html");
-            return false;
+            //response.sendRedirect("/login.html");
+            return true;
         }else{
             return true;
         }

@@ -83,3 +83,8 @@
        WebMvcConfigurerAdapter适配类（WebMvcConfigurationSupport 可能跟WebMvcConfigurerAdapter适配类类似）
        而改为直接实现WebMvcConfigurer接口
        3.另外excludePathPatterns 再把js,css重写一遍，页面才能正常显示样式
+9  引入公共模板部分报错
+   原因：<aside th:replace="~{employee_list :: left-panel}"> employee_list 页面引入公共部分，写成
+      employee_list :: left-panel ，模板名应该引入的是index的公共部分，自己理解错成employee_list引入 left-panel的公共部分
+      所以应该是 从index的公共部分引入left-pannel的公共区域 <aside th:replace="~{index :: left-panel}">
+

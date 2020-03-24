@@ -13,7 +13,7 @@ import springbt.component.MyLocalResolver;
  * @author Hasee
  */
 @Configuration
-public class MyMvcConfig implements WebMvcConfigurer {
+public class MyMvcConfig {
     /**
      * 把切换国际化的功能加入到spring容器中
      */
