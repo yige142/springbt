@@ -15,8 +15,8 @@ import java.util.Map;
 @RestController
 public class HelloController {
 
-    @Autowired
-    DataSource dataSource;
+   // @Autowired
+   // DataSource dataSource;
 
     @Autowired
     JdbcTemplate jdbcTemplate;
@@ -29,9 +29,9 @@ public class HelloController {
     @RequestMapping("/hello")
     public String hello() {
         String sql = "update c_tt set name=? where id=3";
-        int count = jdbcTemplate.update(sql, "kdd3");
+        int count = jdbcTemplate.update(sql, "kdd2");
         System.out.print(count);
-        return "333";
+        return "222";
     }
 
 
